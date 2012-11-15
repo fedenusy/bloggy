@@ -37,6 +37,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency('RedCloth', "~> 4.2")
   s.add_development_dependency('rdiscount', "~> 1.6")
   s.add_development_dependency('redcarpet', "~> 1.9")
+  s.add_development_dependency('haml', "~> 3.1")
+  s.add_development_dependency('sass', "~> 3.2")
 
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"

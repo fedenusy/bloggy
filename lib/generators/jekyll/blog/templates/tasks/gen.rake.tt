@@ -2,7 +2,7 @@ desc 'Run Jekyll in config/jekyll directory without having to cd there'''
 task :generate do
   Dir.chdir("config/jekyll") do
     Rake::Task["parse_haml"].invoke
-    system('jekyll')
+    system('jekyll --no-auto')
   end
 end
 
@@ -11,7 +11,7 @@ task :parse_haml do
   print "Parsing Haml layouts..."
   system(%{
     cd _layouts/haml &&
-    for f in *.haml; do [ -e $f ] && haml $f ../${f%.haml}.html; done
+    for f in *.haml; do [ -e $f ] && haml $f ../${f%.haml}; done
   })
   puts "done."
 end
